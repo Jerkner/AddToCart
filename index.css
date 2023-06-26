@@ -15,7 +15,7 @@ main {
     display: flex;
     flex-direction: column;
     max-width: 360px;
-    margin: 1em auto;
+    margin: 0 auto;
     padding: 3em;
     border-radius: 10px;
     background-color: #EEF0F4;

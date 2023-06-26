@@ -16,6 +16,7 @@ const shoppingList = document.getElementById("shopping-list")
 addBtn.addEventListener("click", function() {
     addItemToDB()
     clearInputField()
+    inputField.focus()
 })
 
 onValue(itemsInDB, function(snapshot) {
@@ -26,8 +27,6 @@ onValue(itemsInDB, function(snapshot) {
     
         for (let i = 0; i < itemsArray.length; i++) {
             let currentItem = itemsArray[i];
-            let currentItemID = currentItem[0]
-            let currentItemValue = currentItem[1]
     
             addItemToList(currentItem)
         }
@@ -35,7 +34,6 @@ onValue(itemsInDB, function(snapshot) {
     } else {
         clearShoppingList()
     }
-
 })
 
 function addItemToDB() {
